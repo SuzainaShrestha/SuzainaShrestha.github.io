@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suzaina Shrestha | Portfolio</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* --- Reset and Basics --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            height: 100vh;
+            background: linear-gradient(135deg, #89f7fe, #66a6ff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        /* Background Image */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&w=1650&q=80') no-repeat center center/cover;
+            filter: blur(15px) brightness(0.7);
+            z-index: -1;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        /* Glass Card */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 25px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-10px);
+        }
+
+        h1, h2 {
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .name {
+            color: #ffcc00;
+        }
+
+        p, li {
+            color: #e0e0e0;
+            line-height: 1.5;
+        }
+
+        ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+
+        /* Social Links */
+        .social-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            color: #ffcc00;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 10px #ffcc00;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 14px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+
+    <div class="container">
+        <!-- Header -->
+        <header class="glass-card">
+            <h1 id="greeting">Hello, I'm <span class="name">Suzaina Shrestha</span></h1>
+            <p>Class 11 BPC Student | Dreaming to be a Nurse</p>
+        </header>
+
+        <!-- About Me Section -->
+        <section class="glass-card">
+            <h2>About Me</h2>
+            <p>Hi! I'm Suzaina, currently studying in Class 11 (BPC). I love helping people and my dream is to become a professional nurse one day. 💖</p>
+        </section>
+
+        <!-- Education Section -->
+        <section class="glass-card">
+            <h2>Education</h2>
+            <ul>
+                <li>Old School: Gyanda Academy (Till Class 10)</li>
+                <li>Current: Class 11 BPC Student</li>
+            </ul>
+        </section>
+
+        <!-- Socials Section -->
+        <section class="glass-card">
+            <h2>Socials</h2>
+            <div class="social-links">
+                <a href="https://www.instagram.com/suzainashrestha20/" target="_blank">Instagram</a>
+                <a href="https://www.youtube.com/@babysuzu" target="_blank">YouTube</a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="glass-card">
+            <p>&copy; 2026 Suzaina Shrestha. Made with 💖</p>
+        </footer>
+    </div>
+
+    <script>
+        // --- Dynamic Greeting Animation ---
+        const greetings = ["Hello!", "Hi there!", "Welcome!", "Namaste!"];
+        const headerName = document.querySelector(".name");
+        let index = 0;
+
+        setInterval(() => {
+            headerName.textContent = greetings[index % greetings.length] + " Suzaina Shrestha";
+            index++;
+        }, 3000);
+    </script>
+</body>
+</html>
