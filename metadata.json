@@ -1,0 +1,9 @@
+
+{
+  "name": "Suzaina Shrestha",
+  "description": "A high-end mobile-optimized React application featuring a personal dashboard, an AI assistant named Charlie, and a professional profile section.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
